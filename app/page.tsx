@@ -1,13 +1,12 @@
 import Image from "next/image";
+import {HeroHeader} from "@/components/header";
+
 
 export default function Home() {
   return (
     <div>
-     <div className="w-1/2 h-[50%] bg-white text-purple-600">
-      <h1>Hello There</h1>
-     </div>
-
-
+  
+    <HeroHeader />
      
     </div>
   );
