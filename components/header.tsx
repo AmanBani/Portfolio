@@ -34,20 +34,20 @@ export const HeroHeader = () => {
             <nav
                 data-state={menuState && 'active'}
                 className={cn('fixed z-20 w-full border-b transition-colors duration-150', scrolled && 'bg-background/50 backdrop-blur-3xl')}>
-                <div className="mx-auto max-w-5xl px-6 transition-all duration-300 text-white">
+                <div className="mx-auto max-w-5xl px-6 transition-all duration-300 text-white ">
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4 text-white">
                         <div className="flex w-full items-center justify-between gap-12 lg:w-auto text-white">
                             <Link
                                 href="/"
                                 aria-label="home"
-                                className="flex space-x-2">
+                                >
                                 <Image src={Logo} alt="My Logo" width={50} height={50}/>
                             </Link>
 
                             <button
                                 onClick={() => setMenuState(!menuState)}
                                 aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
-                                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden text-white">
+                                className="relative align-middle z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden text-white">
                                 <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200 text-white" />
                                 <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
                             </button>
